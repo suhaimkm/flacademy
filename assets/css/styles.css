@@ -1,0 +1,96 @@
+.sitename{
+    font-family:  "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#fla{
+    color: rgba(191, 23, 23, 0.897);
+    
+}
+#believe {
+    color: rgba(191, 23, 23, 0.897);
+    font-weight: bolder;
+}
+.round{
+    border-radius: 15px;
+}
+
+.social-icons a {
+    color: rgba(191, 23, 23, 0.897); /* Bootstrap primary color */
+    font-size: 1.5rem; /* Increase icon size */
+    margin: 0 10px; /* Space between icons */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.social-icons a:hover {
+    color: rgba(191, 23, 23, 0.897); /* Darker shade on hover */
+}
+.hero .bb {
+    background-color: none;
+    border-color: rgba(191, 23, 23, 0.897);
+    color: rgba(191, 23, 23, 0.897);
+    padding: 0.75rem 2.5rem;
+    border-radius:50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.hero .bb:hover{
+    background-color: rgba(191, 23, 23, 0.897);
+    color: var(--contrast-color);
+
+}
+.star-rating .fa-star {
+    color: lightgray; /* Default color for unselected stars */
+}
+.star-rating .fa-star.checked {
+    color: gold; /* Color for selected stars */
+}
+.custom-card {
+    width: 100%; /* Set width to 100% for responsiveness */
+    position: relative; /* Position relative for absolute positioning of social icons */
+    overflow: hidden; /* Hide overflow */
+    border: 1px solid transparent; /* Initial border */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for border color and shadow */
+}
+.custom-card:hover {
+    box-shadow: 0 4px 20px rgba(191, 23, 23, 0.5); /* Add shadow on hover */
+}
+.social-icons {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: -80px; /* Start off-screen to the left, increased for gap */
+    background: rgba(255, 255, 255, 0.9); /* Background color */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding */
+    transition: left 0.3s; /* Smooth transition */
+    z-index: 1; /* Ensure it appears above other elements */
+    transform: translateY(-50%); /* Center the icons vertically */
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column; /* Stack icons vertically */
+}
+.custom-card:hover .social-icons {
+    left: -20px; /* Move into view on hover */
+}
+.social-icons i {
+    margin: 5px 0; /* Space between icons */
+    font-size: 20px; /* Icon size */
+    color: #333; /* Icon color */
+}
+.social-icons :hover{
+    color: rgba(191, 23, 23, 0.897);
+}
+.btn-custom {
+    background-color: rgba(191, 23, 23, 0.897);
+    border-color: rgba(191, 23, 23, 0.897);
+    color: white;
+    border-radius: 5px;
+}
+.btn{
+    border-radius:50px;
+}
+
+.btn-custom:hover {
+    background-color: rgba(149, 25, 25, 0.897);
+    color: white;
+}
