@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>FLAcademy</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iLanding
+  * Template URL: https://bootstrapmade.com/ilanding-bootstrap-landing-page-template/
+  * Updated: Nov 12 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* Center the cards */
+            width: 100%;
+        }
+
+        .card {
+            display: flex;
+            color: rgb(0, 0, 0);
+            background-color: white;
+            /* Change text color for better contrast */
+            border-radius: 8px;
+            border: 1px solid rgba(128, 128, 128, 0.311);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 1000px;
+            /* Fixed width for larger screens */
+            margin: 10px;
+            /* Space between cards */
+            overflow: hidden;
+            flex-direction: row;
+            /* Default layout: image on the right */
+        }
+        .enroll-btn-custom {
+            background-color: rgba(191, 23, 23, 0.897);
+            border-color: rgba(191, 23, 23, 0.897);
+            color: white;
+            border-radius: 5px;
+        }
+        .enroll-btn-custom{
+            border-radius:50px;
+            padding: 10px;
+        }
+
+        .enroll-btn-custom:hover {
+            background-color: rgba(149, 25, 25, 0.897);
+            color: white;
+        }
+
+        .card img {
+            width: 370px;
+            /* Fixed width for the image */
+            height: 370px;
+            /* Slightly increased height for the image */
+            object-fit: cover;
+            flex-shrink: 0;
+            /* Prevent image from shrinking */
+        }
+
+        .card .text-area {
+            padding: 10px;
+            /* Reduced padding for smaller screens */
+            flex: 1;
+            /* Allow text area to take remaining space */
+            overflow: auto;
+            /* Allow scrolling if content overflows */
+        }
+
+        .card h2 {
+            margin: 0 0 10px;
+            color: #000000;
+            font-size: 24px;
+            font-weight: bold;
+            /* Make the title bold */
+        }
+
+        .card p {
+            color: #000000;
+            margin: 10px 0;
+            line-height: 1.6;
+            /* Increase line height for better readability */
+            font-size: 16px;
+            /* Increase font size for better readability */
+        }
+
+        .card .price {
+            font-size: 22px;
+            /* Slightly larger price font */
+            color: #28a745;
+            margin: 10px 0;
+            font-weight: bold;
+            /* Make the price bold */
+        }
+
+        .card .duration {
+            font-size: 16px;
+            color: #777;
+            margin: 10px 0;
+        }
+        /* Star Rating Styles */
+        .star-rating {
+            display: flex;
+            margin: 10px 0;
+        }
+
+        .star{
+            font-size: 24px;
+            color: gold;
+            cursor: pointer;
+        }
+
+        .star.selected {
+            color: orange;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .card {
+                flex-direction: column;
+                /* Change to vertical layout on small screens */
+                width: calc(100% - 20px);
+                /* Full width on small screens */
+            }
+
+            .card img {
+                width: 100%;
+                /* Full width for the image */
+                height: auto;
+            }
+
+            .card .text-area {
+                width: 100%;
+                padding: 2px;
+            }
+
+            .card h2 {
+                font-size: 20px;
+                /* Adjust title font size for smaller screens */
+            }
+
+            .card p {
+                font-size: 14px;
+                /* Adjust paragraph font size for smaller screens */
+            }
+
+            .card .price {
+                font-size: 18px;
+                /* Adjust price font size for smaller screens */
+            }
+
+            .card .duration {
+                font-size: 14px;
+                /* Adjust duration font size for smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename ">FL<SPAn id="fla">Academy</SPAn></h1>
+      </a>
+      <a class="btn-getstarted" href="index.html#contact">Get Started</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title ">
+      <div class="container">
+        <h1>Computer Courses Courses</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Computer Courses Courses</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Courses Section -->
+    <section id="service-details">
+      <div class="card-container">
+        <div class="card">
+            <img src="assets/img/courses/basicComputer.png" alt="C Programming Course Image">
+            <div class="text-area">
+                <h2>Basic Computer Course</h2>
+                <p>A Basic Computer Course is designed to introduce individuals to the fundamental concepts and skills required to effectively use a computer. This course is ideal for beginners who may have little to no prior experience with computers. It covers a range of topics that provide a solid foundation for further learning in the field of information technology..</p>
+                <div class="star-rating">
+                    <span class="star" data-value="1"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="2"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="3"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="4"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="5"><i class="fas fa-star"></i></span>
+                </div>
+                <p class="duration">Duration: 6 weeks</p>
+                <p class="price">&#8377;6500</p>
+                <a href="index.html" class="enroll-btn-custom">Enroll Now</a>
+            </div>
+        </div>
+        <div class="card" >
+            <img src="assets/img/courses/graphicaldesign.png" alt="C Programming Course Image">
+            <div class="text-area">
+                <h2>Graphic Design Course</h2>
+                <p>A Graphic Design Course is designed to equip students with the skills and knowledge necessary to create visually appealing and effective designs for various media. This course is ideal for aspiring graphic designers, marketers, and anyone interested in enhancing their visual communication skills. It covers a wide range of topics, from the principles of design to the use of industry-standard software.</p>
+                <div class="star-rating">
+                    <span class="star" data-value="1"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="2"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="3"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="4"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="5"><i class="fas fa-star"></i></span>
+                </div>
+                <p class="duration">Duration: 2 months</p>
+                <p class="price">&#8377;7500</p>
+                <a href="index.html" class="enroll-btn-custom">Enroll Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/img/courses/webDesigning.png" alt="C Programming Course Image">
+            <div class="text-area">
+                <h2>Web Designing Courses</h2>
+                <p>A Web Designing Course is designed to teach individuals the essential skills and knowledge required to create and maintain visually appealing and user-friendly websites. This course is ideal for aspiring web designers, developers, and anyone interested in enhancing their digital presence. It covers a range of topics, from the basics of web design principles to advanced techniques in coding and user experience (UX) design.</p>
+                <div class="star-rating">
+                    <span class="star" data-value="1"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="2"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="3"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="4"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="5"><i class="fas fa-star"></i></span>
+                </div>
+                <p class="duration">Duration: 2 months</p>
+                <p class="price">&#8377;8999</p>
+                <a href="index.html" class="enroll-btn-custom">Enroll Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/img/courses/FullStack.png" alt="C Programming Course Image">
+            <div class="text-area">
+                <h2>Full Stack Web Development</h2>
+                <p>A Full Stack Web Development Course is designed to equip students with the comprehensive skills needed to build and maintain both the front-end and back-end of web applications. This course is ideal for aspiring web developers, software engineers, and tech enthusiasts who want to gain a holistic understanding of web development. It covers a wide range of topics, from user interface design to server-side programming and database management.</p>
+                <div class="star-rating">
+                    <span class="star" data-value="1"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="2"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="3"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="4"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="5"><i class="fas fa-star"></i></span>
+                </div>
+                <p class="duration">Duration: 4 weeks</p>
+                <p class="price">&#8377;199</p>
+                <a href="index.html" class="enroll-btn-custom">Enroll Now</a>
+            </div>
+        </div>
+        <div class="card" >
+            <img src="assets/img/courses/chatgpt-logo.png" alt="C Programming Course Image">
+            <div class="text-area">
+                <h2>Mastering ChatGPT</h2>
+                <p>The Mastering ChatGPT Course is designed to provide individuals with a comprehensive understanding of how to effectively use and leverage ChatGPT, an advanced language model developed by OpenAI. This course is ideal for professionals, educators, content creators, and anyone interested in harnessing the power of AI-driven conversational agents for various applications. Participants will learn how to interact with ChatGPT, optimize its use for specific tasks, and explore its potential in different fields.</p>
+                <div class="star-rating">
+                    <span class="star" data-value="1"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="2"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="3"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="4"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="5"><i class="fas fa-star"></i></span>
+                </div>
+                <p class="duration">Duration: 6 weeks</p>
+                <p class="price">&#8377;6999</p>
+                <a href="index.html" class="enroll-btn-custom">Enroll Now</a>
+            </div>
+        </div>
+        <div class="card" >
+            <img src="assets/img/courses/advance excel.png" alt="C Programming Course Image">
+            <div class="text-area">
+                <h2>Advanced Excel Course </h2>
+                <p>An Advanced Excel Course is designed for individuals who already have a foundational understanding of Microsoft Excel and want to deepen their skills to leverage the full potential of the software. This course covers advanced features, functions, and techniques that can significantly enhance data analysis, reporting, and decision-making capabilities. It is ideal for professionals in finance, data analysis, project management, and other fields where data manipulation and analysis are crucial.</p>
+                <div class="star-rating">
+                    <span class="star" data-value="1"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="2"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="3"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="4"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="5"><i class="fas fa-star"></i></span>
+                </div>
+                <p class="duration">Duration: 1 month</p>
+                <p class="price">&#8377;8500</p>
+                <a href="index.html" class="enroll-btn-custom">Enroll Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/img/courses/java-logo.png" alt="C Programming Course Image">
+            <div class="text-area">
+                <h2>Core Java Course</h2>
+                <p>A Core Java Course is designed to provide a comprehensive understanding of the fundamental concepts and features of the Java programming language. This course is ideal for beginners who want to learn Java from scratch, as well as for experienced programmers looking to solidify their understanding of core Java concepts. Participants will learn about object-oriented programming, data structures, exception handling, and more, enabling them to build robust Java applications.</p>
+                <div class="star-rating">
+                    <span class="star" data-value="1"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="2"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="3"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="4"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="5"><i class="fas fa-star"></i></span>
+                </div>
+                <p class="duration">Duration: 6 weeks</p>
+                <p class="price">&#8377;7000</p>
+                <a href="index.html" class="enroll-btn-custom">Enroll Now</a>
+            </div>
+        </div>
+        <div class="card" >
+            <img src="assets/img/courses/pythonlogo.png" alt="C Programming Course Image">
+            <div class="text-area">
+                <h2>python Course</h2>
+                <p>A Python Course is designed to provide learners with a comprehensive understanding of the Python programming language, which is known for its simplicity and versatility. This course is suitable for beginners with no prior programming experience as well as for experienced programmers looking to enhance their skills in Python. Participants will learn about Python's syntax, data structures, object-oriented programming, and various libraries and frameworks that make Python a powerful tool for various applications, including web development, data analysis, machine learning, and automation.</p>
+                <div class="star-rating">
+                    <span class="star" data-value="1"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="2"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="3"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="4"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="5"><i class="fas fa-star"></i></span>
+                </div>
+                <p class="duration">Duration: 6 weeks</p>
+                <p class="price">&#8377;6500</p>
+                <a href="index.html" class="enroll-btn-custom">Enroll Now</a>
+            </div>
+        </div>
+        <div class="card" >
+            <img src="assets/img/courses/c_programming.png" alt="C Programming Course Image">
+            <div class="text-area">
+                <h2>Mastering C programming Course</h2>
+                <p>C programming is a high-level, general-purpose programming language developed in the early 1970s by
+                    Dennis Ritchie. Known for its efficiency and flexibility, C provides low-level access to memory and
+                    is widely used in system programming, embedded systems, and application development. Its procedural
+                    nature and rich library support make it a foundational language that influences many modern
+                    programming languages.</p>
+                <div class="star-rating">
+                    <span class="star" data-value="1"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="2"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="3"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="4"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="5"><i class="fas fa-star"></i></span>
+                </div>
+                <p class="duration">Duration: 6 weeks</p>
+                <p class="price">&#8377;4000</p>
+                <a href="index.html" class="enroll-btn-custom">Enroll Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="assets/img/courses/ultimate.png" alt="C Programming Course Image">
+            <div class="text-area">
+                <h2>Ultimate Frontend Web devloper:JS,Type Script ,React</h2>
+                <p>The Ultimate Frontend Web Developer Course is designed to equip learners with the essential skills and knowledge required to build modern, interactive web applications using JavaScript, TypeScript, and React. This course is suitable for both beginners and experienced developers looking to enhance their frontend development skills. Participants will learn how to create responsive user interfaces, manage application state, and utilize modern development tools and practices.</p>
+                <div class="star-rating">
+                    <span class="star" data-value="1"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="2"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="3"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="4"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="5"><i class="fas fa-star"></i></span>
+                </div>
+                <p class="duration">Duration: 8 weeks</p>
+                <p class="price">&#8377;7500</p>
+                <a href="index.html" class="enroll-btn-custom">Enroll Now</a>
+            </div>
+        </div>
+        <div class="card" >
+            <img src="assets/img/courses/aws.jpg" alt="C Programming Course Image">
+            <div class="text-area">
+                <h2>Cloud Practitioner(AWS)</h2>
+                <p>The AWS Cloud Practitioner Course is designed to provide a foundational understanding of Amazon Web Services (AWS) and cloud computing concepts. This course is ideal for individuals who are new to the cloud and want to gain a basic understanding of AWS services, architecture, pricing, and security. It is also suitable for professionals looking to validate their knowledge of AWS and prepare for the AWS Certified Cloud Practitioner exam.</p>
+                <div class="star-rating">
+                    <span class="star" data-value="1"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="2"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="3"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="4"><i class="fas fa-star"></i></span>
+                    <span class="star" data-value="5"><i class="fas fa-star"></i></span>
+                </div>
+                <p class="duration">Duration: 6 weeks</p>
+                <p class="price">&#8377;8000</p>
+                <a href="index.html" class="enroll-btn-custom">Enroll Now</a>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- /Courses Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/flalogo.png" alt="Logo" class="img-fluid" style="max-width: 150px;">
+            <span class="sitename">Future Leaders Academy</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Sameena Complex, 2nd Floor,</p>
+            <p>Azad nagar 1st Cross, Bhatkal</p>
+            <p>Landmark: Opposite Huda Masjid</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 8867616401</span></p>
+            <p><strong>Email:</strong> <span>info@flacademy.co.in</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="https://x.com/flacademybkl/" target="_blank"><i class="bi bi-twitter-x"></i></a>
+            <a href=" https://www.facebook.com/flacademybkl/" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/flacademybkl/"target="_blank"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="index.html#about">About us</a></li>
+            <li><a href="index.html#Trainers">Trainers</a></li>
+            <li><a href="index.html#Courses">Courses</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Courses</h4>
+          <ul>
+            <li><a href="index.html">Computer Courses Courses</a></li>
+            <li><a href="index.html">Spoken Arabic Courses</a></li>
+            <li><a href="index.html">Computer Courses</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 footer-map">
+          <h4>Our Location</h4>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3871.3175157408427!2d74.53814727597447!3d13.999177786418947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbc431c06afa55f%3A0xba6ca6555395b03c!2sFuture%20Leaders%20Academy!5e0!3m2!1sen!2sin!4v1733391252971!5m2!1sen!2sin"
+              width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </iframe>
+          </div>
+
+
+
+        </div>
+      </div>
+
+      <div class="container copyright text-center mt-4">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">FLACADEMY</strong> <span>All Rights Reserved</span>
+        </p>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">Suhaim Arshad Mugni</a>
+        </div>
+      </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
